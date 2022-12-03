@@ -1,10 +1,5 @@
-<script setup>
-import HelloWorld from "~/components/HelloWorld.vue";
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    <HelloWorld />
-    <p class="text-7xl">hai there</p>
-  </div>
+  <router-view></router-view>
 </template>
