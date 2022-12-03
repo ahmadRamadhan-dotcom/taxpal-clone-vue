@@ -1,3 +1,13 @@
+<script setup>
+import Logo from "~/components/login/Logo.vue";
+import Form from "~/components/register/Form.vue";
+</script>
+
 <template>
-  <div class="border-8"></div>
+  <main class="p-4">
+    <div class="mt-6">
+      <Logo />
+      <Form />
+    </div>
+  </main>
 </template>
