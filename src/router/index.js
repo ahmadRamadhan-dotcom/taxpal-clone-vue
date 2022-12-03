@@ -17,6 +17,11 @@ const routes = [
     name: "Register",
     component: () => import("~/views/RegisterView.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "404 Notfound",
+    component: () => import("~/views/NotFound.vue"),
+  },
 ];
 
 const router = createRouter({
