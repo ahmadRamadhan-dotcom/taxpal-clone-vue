@@ -9,12 +9,12 @@ const routes = [
   },
   {
     path: "/login",
-    name: "Sign",
+    name: "Sign In",
     component: () => import("~/views/SignInView.vue"),
   },
   {
     path: "/register",
-    name: "Register",
+    name: "Sign Up",
     component: () => import("~/views/RegisterView.vue"),
   },
   {
@@ -27,6 +27,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.path != "/") {
+    document.title = `${to.name} - Taxpal`;
+  } else if (to.name === "404 Notfound") {
+    document.title = "404: This page colud not be found";
+  }
+  next();
 });
 
 export default router;
