@@ -32,24 +32,12 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (to.path != "/") {
     document.title = `${to.name} - Taxpal`;
+  } else if (to.path == "/") {
+    document.title = "TaxPal - Accounting make simple for small businesses";
   } else if (to.name === "404 Notfound") {
     document.title = "404: This page colud not be found";
   }
   next();
-});
-
-router.beforeResolve((to, from, next) => {
-  // If this isn't an initial page load.
-  if (to.name) {
-    // Start the route progress bar.
-    NProgress.start();
-  }
-  next();
-});
-
-router.afterEach((to, from) => {
-  // Complete the animation of the route progress bar.
-  NProgress.done();
 });
 
 export default router;

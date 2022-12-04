@@ -1,5 +1,5 @@
 <script setup>
-import Logo from "~/components/login/Logo.vue";
+import Logo from "~/components/Logo.vue";
 import Form from "~/components/register/Form.vue";
 </script>
 
