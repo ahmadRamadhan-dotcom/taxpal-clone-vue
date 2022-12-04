@@ -1,6 +1,6 @@
 <template>
   <ul
-    :class="showNav ? 'fixed' : 'hidden'"
+    :class="showNav ? 'fixed ' : 'hidden'"
     class="mt-7 md:mt-0 w-full sm:w-[93%] pt-5 pb-7 md:py-0 bg-white lg:py-0 grid gap-4 md:flex rounded-xl p-3 border md:border-[0px] items-center lg:gap-4"
   >
     <li

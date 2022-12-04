@@ -1,8 +1,9 @@
 <script setup>
 import Header from "~/components/home/Header.vue";
+import Hero from "~/components/home/Hero.vue";
 import { useHeaderStore } from "~/store/useHeaderStore";
 import { storeToRefs } from "pinia";
-import { onMounted, watchEffect } from "vue";
+import { watchEffect } from "vue";
 
 const main = useHeaderStore();
 
@@ -18,8 +19,10 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="h-[200vh]" :class="showNav ? 'bg-slate-200/50' : ''">
+  <div :class="showNav ? 'bg-slate-300/50' : ''">
     <Header />
-    <main></main>
+    <main>
+      <Hero />
+    </main>
   </div>
 </template>
